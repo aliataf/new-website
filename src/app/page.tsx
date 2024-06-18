@@ -1,4 +1,4 @@
-import { prisma } from '~/lib';
+import { prisma } from '@/lib';
 
 export default async function Home() {
   const projects = await prisma.project.findMany();
