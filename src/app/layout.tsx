@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib';
@@ -10,7 +10,11 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: 'Ali Ataf',
+  metadataBase: new URL('https://aliataf.com'),
+  title: {
+    default: 'Ali Ataf',
+    template: '%s | Ali Ataf',
+  },
   description: "Ali Ataf's website",
   publisher: 'Ali Ataf',
   creator: 'Ali Ataf',
